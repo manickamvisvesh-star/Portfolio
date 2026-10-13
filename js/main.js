@@ -207,18 +207,7 @@ document.querySelectorAll('.hstat-n[data-count]').forEach(el => {
 });
 
 
-/* ════════════════════════════════════════════════════
-   9. SKILL BARS
-════════════════════════════════════════════════════ */
-document.querySelectorAll('.skill-fill').forEach(bar => {
-  const obs = new IntersectionObserver(([e]) => {
-    if (e.isIntersecting) {
-      bar.classList.add('filled');
-      obs.unobserve(bar);
-    }
-  }, { threshold: 0.3 });
-  obs.observe(bar);
-});
+
 
 
 /* ════════════════════════════════════════════════════
