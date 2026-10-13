@@ -1,0 +1,10 @@
+/* ═══════════════════════════════════════════════════
+   MATRIX RAIN — Canvas background for Hero section
+   ═══════════════════════════════════════════════════ */
+
+/* Handled entirely in JS — this file is a placeholder
+   for future canvas-specific CSS overrides. */
+
+#matrixCanvas {
+  image-rendering: pixelated;
+}

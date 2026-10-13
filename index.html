@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visvesh Manickam — Frontend Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <!-- AOS Scroll Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- Google Fonts: Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ CURSOR ═══════════════════════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══════════════════════ NAV ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">VM</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link" data-section="hero">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="hero" class="hero">
+    <!-- Matrix canvas background -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Floating orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag" data-aos="fade-down" data-aos-duration="800">
+        <span class="tag-dot"></span> Available for work
+      </div>
+
+      <h1 class="hero-name" id="heroName">
+        <span class="name-line">Visvesh</span>
+        <span class="name-line accent">Manickam</span>
+      </h1>
+
+      <div class="hero-role">
+        <span class="role-prefix">&gt;&gt; </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="600">
+        Crafting digital experiences that live at the intersection of <br />
+        <em>design</em> and <em>engineering</em>.
+      </p>
+
+      <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Work</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="1000">
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span><span class="stat-sym">+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="20">0</span><span class="stat-sym">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="15">0</span><span class="stat-sym">+</span>
+          <span class="stat-label">Clients</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section id="about" class="about section">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">// 01</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-image-wrapper" data-aos="fade-right" data-aos-duration="1000">
+        <div class="about-img-frame">
+          <div class="img-placeholder">
+            <div class="avatar-initials">VM</div>
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-ring ring-3"></div>
+          </div>
+          <div class="img-glow"></div>
+          <div class="img-corner tl"></div>
+          <div class="img-corner tr"></div>
+          <div class="img-corner bl"></div>
+          <div class="img-corner br"></div>
+        </div>
+        <div class="about-badge">
+          <div class="badge-icon">⚡</div>
+          <div>
+            <div class="badge-title">Frontend Dev</div>
+            <div class="badge-sub">React · Next.js · Vue</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <p class="about-greeting">Hello, World! 👋</p>
+        <p class="about-text">
+          I'm <strong>Visvesh Manickam</strong>, a passionate <strong>Frontend Developer</strong>
+          with a love for building beautiful, performant web experiences. I specialize in crafting
+          pixel-perfect UIs with smooth interactions and clean code.
+        </p>
+        <p class="about-text">
+          When I'm not pushing pixels, you'll find me exploring new frameworks, contributing
+          to open source, or experimenting with creative coding. I believe great software is
+          both art and engineering.
+        </p>
+
+        <div class="about-info-grid">
+          <div class="info-item">
+            <span class="info-label">Location</span>
+            <span class="info-value">India 🇮🇳</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Experience</span>
+            <span class="info-value">3+ Years</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Availability</span>
+            <span class="info-value accent-text">Open to Work ✓</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Focus</span>
+            <span class="info-value">Web & UI</span>
+          </div>
+        </div>
+
+        <div class="about-actions">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="#" class="btn btn-ghost" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+  <section id="skills" class="skills section">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">// 02</span>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-categories" data-aos="fade-up" data-aos-delay="200">
+      <!-- Frontend -->
+      <div class="skill-category">
+        <h3 class="category-title">
+          <span class="cat-icon">🎨</span> Frontend
+        </h3>
+        <div class="skill-pills">
+          <div class="skill-pill" data-level="90">
+            <span class="pill-icon">⚛️</span> React
+            <div class="pill-bar"><div class="pill-fill" style="--w:90%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="85">
+            <span class="pill-icon">▲</span> Next.js
+            <div class="pill-bar"><div class="pill-fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="80">
+            <span class="pill-icon">💚</span> Vue.js
+            <div class="pill-bar"><div class="pill-fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="95">
+            <span class="pill-icon">🌊</span> CSS / Tailwind
+            <div class="pill-bar"><div class="pill-fill" style="--w:95%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="92">
+            <span class="pill-icon">📜</span> JavaScript / TS
+            <div class="pill-bar"><div class="pill-fill" style="--w:92%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-category">
+        <h3 class="category-title">
+          <span class="cat-icon">🔧</span> Tools & Workflow
+        </h3>
+        <div class="skill-pills">
+          <div class="skill-pill" data-level="88">
+            <span class="pill-icon">🐙</span> Git / GitHub
+            <div class="pill-bar"><div class="pill-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="82">
+            <span class="pill-icon">🐋</span> Docker
+            <div class="pill-bar"><div class="pill-fill" style="--w:82%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="75">
+            <span class="pill-icon">🔷</span> Figma
+            <div class="pill-bar"><div class="pill-fill" style="--w:75%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="80">
+            <span class="pill-icon">⚡</span> Vite / Webpack
+            <div class="pill-bar"><div class="pill-fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="78">
+            <span class="pill-icon">🧪</span> Jest / Vitest
+            <div class="pill-bar"><div class="pill-fill" style="--w:78%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend / Other -->
+      <div class="skill-category">
+        <h3 class="category-title">
+          <span class="cat-icon">⚙️</span> Backend & DB
+        </h3>
+        <div class="skill-pills">
+          <div class="skill-pill" data-level="75">
+            <span class="pill-icon">🟢</span> Node.js
+            <div class="pill-bar"><div class="pill-fill" style="--w:75%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="70">
+            <span class="pill-icon">🚂</span> Express.js
+            <div class="pill-bar"><div class="pill-fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="72">
+            <span class="pill-icon">🍃</span> MongoDB
+            <div class="pill-bar"><div class="pill-fill" style="--w:72%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="68">
+            <span class="pill-icon">🐘</span> PostgreSQL
+            <div class="pill-bar"><div class="pill-fill" style="--w:68%"></div></div>
+          </div>
+          <div class="skill-pill" data-level="80">
+            <span class="pill-icon">🔥</span> Firebase
+            <div class="pill-bar"><div class="pill-fill" style="--w:80%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating tech logos band -->
+    <div class="tech-band" data-aos="fade-up" data-aos-delay="400">
+      <div class="tech-scroll-track">
+        <div class="tech-scroll-inner" id="techScroll">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          <span>TypeScript</span><span>React</span><span>Next.js</span>
+          <span>Vue</span><span>Tailwind</span><span>GSAP</span>
+          <span>Node.js</span><span>MongoDB</span><span>Firebase</span>
+          <span>Git</span><span>Docker</span><span>Figma</span>
+          <!-- duplicate for infinite scroll -->
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          <span>TypeScript</span><span>React</span><span>Next.js</span>
+          <span>Vue</span><span>Tailwind</span><span>GSAP</span>
+          <span>Node.js</span><span>MongoDB</span><span>Firebase</span>
+          <span>Git</span><span>Docker</span><span>Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+  <section id="projects" class="projects section">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">// 03</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="nextjs">Next.js</button>
+      <button class="filter-btn" data-filter="vanilla">Vanilla JS</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card" data-tags="react" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="card-icon">🛒</div>
+          <div class="card-links">
+            <a href="#" class="card-link" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link" title="Live Demo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="card-title">E-Commerce Platform</h3>
+        <p class="card-desc">A full-featured shopping platform with real-time cart, payment integration, and admin dashboard. Built for scale.</p>
+        <div class="card-tags">
+          <span class="tag">React</span>
+          <span class="tag">Redux</span>
+          <span class="tag">Stripe</span>
+          <span class="tag">Firebase</span>
+        </div>
+      </div>
+
+      <div class="project-card featured" data-tags="nextjs" data-aos="fade-up" data-aos-delay="150">
+        <div class="card-glow"></div>
+        <div class="featured-badge">Featured</div>
+        <div class="card-header">
+          <div class="card-icon">📊</div>
+          <div class="card-links">
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="card-title">Analytics Dashboard</h3>
+        <p class="card-desc">Real-time analytics dashboard with interactive charts, dark mode, and multi-tenant support. Processing 1M+ data points daily.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">D3.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Prisma</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="vanilla" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="card-icon">🎮</div>
+          <div class="card-links">
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="card-title">Canvas Particle Engine</h3>
+        <p class="card-desc">A high-performance 2D particle simulation engine built on raw Canvas API. 60fps with 10,000+ particles.</p>
+        <div class="card-tags">
+          <span class="tag">Vanilla JS</span>
+          <span class="tag">Canvas API</span>
+          <span class="tag">WebGL</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="react" data-aos="fade-up" data-aos-delay="250">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="card-icon">💬</div>
+          <div class="card-links">
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="card-title">Real-Time Chat App</h3>
+        <p class="card-desc">End-to-end encrypted chat with rooms, direct messages, and file sharing. Supports 1000+ concurrent users.</p>
+        <div class="card-tags">
+          <span class="tag">React</span>
+          <span class="tag">Socket.io</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="nextjs" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="card-icon">✍️</div>
+          <div class="card-links">
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="card-title">Dev Blog CMS</h3>
+        <p class="card-desc">Markdown-based blog platform with SEO optimization, code highlighting, and dark/light mode toggle.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">MDX</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Vercel</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="vanilla" data-aos="fade-up" data-aos-delay="350">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="card-icon">🌐</div>
+          <div class="card-links">
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="card-title">3D Portfolio Scene</h3>
+        <p class="card-desc">Interactive 3D web experience using Three.js with custom shaders, physics simulation, and GLTF model loading.</p>
+        <div class="card-tags">
+          <span class="tag">Three.js</span>
+          <span class="tag">GLSL</span>
+          <span class="tag">WebGL</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+  <section id="experience" class="experience section">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">// 04</span>
+      <h2 class="section-title">Experience</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+        <div class="timeline-dot"></div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div>
+              <h3 class="tc-role">Senior Frontend Developer</h3>
+              <div class="tc-company">🏢 TechCorp Solutions</div>
+            </div>
+            <div class="tc-period">2023 – Present</div>
+          </div>
+          <ul class="tc-achievements">
+            <li>Led frontend architecture for a SaaS platform serving 50K+ users</li>
+            <li>Reduced page load time by 60% through code splitting and lazy loading</li>
+            <li>Mentored a team of 4 junior developers</li>
+            <li>Implemented a design system used across 8 product teams</li>
+          </ul>
+          <div class="tc-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span>
+            <span class="tag">GraphQL</span><span class="tag">AWS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+        <div class="timeline-dot"></div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div>
+              <h3 class="tc-role">Frontend Developer</h3>
+              <div class="tc-company">🚀 StartupXYZ</div>
+            </div>
+            <div class="tc-period">2022 – 2023</div>
+          </div>
+          <ul class="tc-achievements">
+            <li>Built responsive UI from scratch for a fintech product</li>
+            <li>Integrated third-party APIs (Stripe, Plaid, Twilio)</li>
+            <li>Achieved 98+ Lighthouse performance score</li>
+          </ul>
+          <div class="tc-tags">
+            <span class="tag">Vue.js</span><span class="tag">Nuxt</span>
+            <span class="tag">Node.js</span><span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-header">
+            <div>
+              <h3 class="tc-role">Junior Web Developer</h3>
+              <div class="tc-company">💻 Freelance</div>
+            </div>
+            <div class="tc-period">2021 – 2022</div>
+          </div>
+          <ul class="tc-achievements">
+            <li>Delivered 15+ client websites with 100% satisfaction</li>
+            <li>Specialized in performance optimization and SEO</li>
+            <li>Built custom WordPress themes and plugins</li>
+          </ul>
+          <div class="tc-tags">
+            <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span>
+            <span class="tag">WordPress</span><span class="tag">PHP</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+  <section id="contact" class="contact section">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">// 05</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+        <h3 class="contact-heading">Let's build something <span class="accent-text">amazing</span> together.</h3>
+        <p class="contact-sub">Whether you have a project in mind, want to collaborate, or just want to say hi — my inbox is always open.</p>
+
+        <div class="contact-links">
+          <a href="mailto:visvesh@example.com" class="contact-link">
+            <div class="cl-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="cl-label">Email</div>
+              <div class="cl-value">visvesh@example.com</div>
+            </div>
+          </a>
+          <a href="https://github.com" target="_blank" class="contact-link">
+            <div class="cl-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <div>
+              <div class="cl-label">GitHub</div>
+              <div class="cl-value">github.com/visvesh</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-link">
+            <div class="cl-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="cl-label">LinkedIn</div>
+              <div class="cl-value">linkedin.com/in/visvesh</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" placeholder="John Doe" required />
+            <div class="input-border"></div>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" placeholder="john@example.com" required />
+            <div class="input-border"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="fsubject">Subject</label>
+          <input type="text" id="fsubject" placeholder="Project inquiry..." required />
+          <div class="input-border"></div>
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" rows="5" placeholder="Tell me about your project..." required></textarea>
+          <div class="input-border"></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span id="btnText">Send Message</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+        <div class="form-success" id="formSuccess">
+          ✅ Message sent! I'll get back to you within 24 hours.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>VM<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-text">Built with 💚 by Visvesh Manickam</p>
+      <p class="footer-copy">&copy; 2026 — All rights reserved.</p>
+    </div>
+    <div class="footer-grid-lines"></div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

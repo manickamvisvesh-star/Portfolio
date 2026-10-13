@@ -1,0 +1,168 @@
+/* ═══════════════════════════════════════════════════
+   ANIMATIONS — Extra keyframes & cinematic effects
+   ═══════════════════════════════════════════════════ */
+
+/* Glitch text effect */
+@keyframes glitch-1 {
+  0%   { clip-path: inset(0 0 95% 0); transform: translate(-4px, 0); }
+  25%  { clip-path: inset(30% 0 50% 0); transform: translate(4px, 0); }
+  50%  { clip-path: inset(70% 0 10% 0); transform: translate(-2px, 0); }
+  75%  { clip-path: inset(5% 0 80% 0); transform: translate(2px, 0); }
+  100% { clip-path: inset(0 0 95% 0); transform: translate(0, 0); }
+}
+@keyframes glitch-2 {
+  0%   { clip-path: inset(80% 0 5% 0); transform: translate(4px, 0); }
+  33%  { clip-path: inset(20% 0 60% 0); transform: translate(-4px, 0); }
+  66%  { clip-path: inset(55% 0 30% 0); transform: translate(3px, 0); }
+  100% { clip-path: inset(80% 0 5% 0); transform: translate(0, 0); }
+}
+
+.glitch-text {
+  position: relative;
+}
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.glitch-text::before {
+  color: #39ff14;
+  animation: glitch-1 3s steps(1) infinite;
+  opacity: 0.7;
+}
+.glitch-text::after {
+  color: #00ffff;
+  animation: glitch-2 3s steps(1) infinite;
+  opacity: 0.5;
+}
+
+/* Shimmer effect for cards */
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+.shimmer-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(57,255,20,0.15) 50%,
+    transparent 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Fade in up for staggered items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scanning line effect */
+@keyframes scanLine {
+  0%   { top: -2px; opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Neon flicker */
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+      0 0 10px #39ff14,
+      0 0 20px #39ff14,
+      0 0 40px #39ff14;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* Grid reveal */
+@keyframes gridReveal {
+  from { opacity: 0; transform: scaleX(0); transform-origin: left; }
+  to   { opacity: 1; transform: scaleX(1); }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+/* Rotate animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─── HERO NAME GLITCH ON HOVER ───── */
+.hero-name:hover .name-line.accent {
+  animation: neonFlicker 0.4s ease-in-out;
+}
+
+/* ─── SECTION REVEAL LINES ──────────── */
+.section-line {
+  animation: gridReveal 1s var(--ease-out) forwards;
+}
+
+/* ─── PROJECT CARD SCAN EFFECT ──────── */
+.project-card::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(57,255,20,0.4), transparent);
+  top: -2px;
+  animation: scanLine 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-card:hover::after { opacity: 1; }
+
+/* ─── TIMELINE DOT RIPPLE ──────────── */
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(57,255,20,0.3);
+  animation: ripple 2s ease-out infinite;
+}
+@keyframes ripple {
+  0%   { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* ─── ABOUT AVATAR FLOAT ────────────── */
+.about-img-frame {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ─── SKILL BAR ANIMATION TRIGGER ───── */
+@keyframes skillBarFill {
+  from { width: 0; }
+  to   { width: var(--w); }
+}
+
+/* ─── BACKGROUND GRID PATTERN ──────── */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(57,255,20,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57,255,20,0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+.section > * { position: relative; z-index: 1; }
