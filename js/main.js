@@ -1,4 +1,5 @@
 'use strict';
+document.documentElement.classList.add('js');
 
 /* ════════════════════════════════════════════════════
    1. PAGE LOADER
@@ -7,16 +8,29 @@ const loader  = document.getElementById('loader');
 const loaderP = document.getElementById('loaderPct');
 let progress = 0;
 
+function dismissLoader() {
+  if (!loader) return;
+  loader.classList.add('out');
+  setTimeout(() => {
+    loader.style.display = 'none';
+    loader.remove();
+  }, 500);
+}
+
 const loaderTimer = setInterval(() => {
-  progress += Math.random() * 18 + 6;
+  progress += Math.random() * 25 + 15;
   if (progress >= 100) {
     progress = 100;
     clearInterval(loaderTimer);
     if (loaderP) loaderP.textContent = '100%';
-    setTimeout(() => loader?.classList.add('out'), 300);
+    setTimeout(dismissLoader, 200);
+  } else {
+    if (loaderP) loaderP.textContent = Math.floor(progress) + '%';
   }
-  if (loaderP) loaderP.textContent = Math.floor(progress) + '%';
-}, 100);
+}, 80);
+
+// Fallback safety timeout in case interval is delayed
+setTimeout(dismissLoader, 1500);
 
 
 /* ════════════════════════════════════════════════════
